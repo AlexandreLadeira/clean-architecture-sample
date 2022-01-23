@@ -1,4 +1,4 @@
-package com.alelad.plugins
+package com.alelad.api.impl.plugins
 
 import io.ktor.server.application.Application
 import io.ktor.server.application.call
