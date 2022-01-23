@@ -1,4 +1,5 @@
 val kotlinVersion: String by project
+val kotestVersion: String by project
 val version: String by project
 
 plugins {
@@ -6,15 +7,21 @@ plugins {
 }
 
 allprojects {
-    group = "com.alelad"
+    group = "com.alelad.cas"
 
     apply(plugin = "org.jetbrains.kotlin.jvm")
 
     repositories {
         mavenCentral()
+        mavenLocal()
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
     }
 
     dependencies {
-        testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
+        testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
+        testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
     }
 }

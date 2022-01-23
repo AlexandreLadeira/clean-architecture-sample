@@ -7,7 +7,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.alelad.main.ApplicationKt")
+    mainClass.set("com.alelad.cas.main.ApplicationKt")
 }
 
 repositories {

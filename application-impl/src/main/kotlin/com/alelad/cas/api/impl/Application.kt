@@ -1,6 +1,6 @@
-package com.alelad.api.impl
+package com.alelad.cas.api.impl
 
-import com.alelad.api.impl.plugins.configureRouting
+import com.alelad.cas.api.impl.plugins.configureRouting
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
