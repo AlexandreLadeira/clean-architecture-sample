@@ -1,22 +1,8 @@
-val ktorVersion: String by project
-val kotlinVersion: String by project
-val logbackVersion: String by project
-
-plugins {
-    application
-}
-
-application {
-    mainClass.set("com.alelad.cas.main.ApplicationKt")
-}
-
-repositories {
-    maven { url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap") }
-}
+val mockkVersion: String by project
 
 dependencies {
-    implementation("io.ktor:ktor-server-core:$ktorVersion")
-    implementation("io.ktor:ktor-server-netty:$ktorVersion")
-    implementation("ch.qos.logback:logback-classic:$logbackVersion")
-    testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
+    implementation(project(":application"))
+    implementation(project(":domain"))
+
+    testImplementation("io.mockk:mockk:$mockkVersion")
 }

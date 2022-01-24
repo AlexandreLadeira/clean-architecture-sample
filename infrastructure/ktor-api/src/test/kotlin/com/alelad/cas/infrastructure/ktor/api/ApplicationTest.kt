@@ -1,6 +1,6 @@
-package com.alelad.cas.api.impl
+package com.alelad.cas.infrastructure.ktor.api
 
-import com.alelad.cas.api.impl.plugins.configureRouting
+import com.alelad.cas.infrastructure.ktor.api.plugins.configureRouting
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 import io.ktor.http.HttpMethod
