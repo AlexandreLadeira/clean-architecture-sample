@@ -1,5 +1,5 @@
 package com.alelad.cas.application.model
 
-import java.util.UUID
+import com.alelad.cas.domain.entity.UserId
 
-data class CreateUserResponse(val id: UUID)
+data class CreateUserResponse(val id: UserId)
