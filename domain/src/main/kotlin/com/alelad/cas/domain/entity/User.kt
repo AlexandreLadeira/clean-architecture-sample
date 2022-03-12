@@ -2,8 +2,10 @@ package com.alelad.cas.domain.entity
 
 import java.util.UUID
 
+typealias UserId = UUID
+
 data class User(
-    val id: UUID = UUID.randomUUID(),
+    val id: UserId = UserId.randomUUID(),
     val name: String,
     val password: String
 ) {
