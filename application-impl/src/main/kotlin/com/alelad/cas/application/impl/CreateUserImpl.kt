@@ -8,7 +8,7 @@ import com.alelad.cas.domain.gateway.UserGateway
 
 class CreateUserImpl(private val userGateway: UserGateway) : CreateUser {
     override suspend fun create(request: CreateUserRequest): CreateUserResponse =
-        userGateway.create(name = request.name, password = request.password)
+        userGateway.create(User(name = request.name, password = request.password))
             .toUseCaseResponse()
 
     private fun User.toUseCaseResponse() = CreateUserResponse(id)

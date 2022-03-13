@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation(project(":application-impl"))
+    implementation(project(":infrastructure:dynamodb-persistence"))
 
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")

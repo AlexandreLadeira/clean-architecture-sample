@@ -1,6 +1,7 @@
 package com.alelad.cas.application.impl
 
 import com.alelad.cas.application.model.CreateUserRequest
+import com.alelad.cas.domain.entity.User
 import com.alelad.cas.domain.gateway.UserGateway
 import io.kotest.core.spec.style.ShouldSpec
 import io.mockk.clearMocks
@@ -20,6 +21,6 @@ class CreateUserImplTest : ShouldSpec({
         val request = CreateUserRequest("NewUser", "NewUserPassword")
         createUserImpl.create(request)
 
-        coVerify { userGateway.create(request.name, request.password) }
+        coVerify { userGateway.create(User(any(), request.name, request.password)) }
     }
 })

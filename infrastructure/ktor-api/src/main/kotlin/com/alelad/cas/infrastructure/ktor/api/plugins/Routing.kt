@@ -1,5 +1,6 @@
 package com.alelad.cas.infrastructure.ktor.api.plugins
 
+import com.alelad.cas.infrastructure.ktor.api.routes.userRouting
 import io.ktor.server.application.Application
 import io.ktor.server.application.call
 import io.ktor.server.response.respondText
@@ -12,5 +13,6 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
+        userRouting()
     }
 }
